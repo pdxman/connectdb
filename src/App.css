@@ -1,3 +1,56 @@
+body{ 
+  padding: 2em;
+  background: #4ca1a3;
+  display: flex;
+  height: 90vh;
+  align-items: center; 
+  justify-content: center;
+  flex-flow:row;}
+  
+.main-todo-list-wrapper{
+  display: flex;
+  flex-flow: column; 
+  padding: 2em 4em; 
+  box-shadow: 0 2px 11px 0 rgba(0,0,0,.5);
+  background: #511281;
+  border-radius: 10px;
+  transition: all 1s ease ;
+  margin-right: 1em;
+ 
+}
+
+#root{
+  display: flex;
+  justify-content: space-around;
+}
+
+button, input{ display: block; width: 100%; max-width: 100%; margin: .5em 0 .5em;  padding: .5em; }
+button { background: #a5e1ad; transform: translateX(3em); opacity: 0; animation: move 1s 1s ease forwards;}
+input { transform: translateX(-3em); opacity: 0; animation: move 1s 1s ease forwards;}
+.main-todo-list-wrapper ul li input{ max-width: 3em;}
+
+.list-text { line-height: 1.6;}
+.main-todo-list-wrapper ul { margin-left: 0; padding-left: 0; }
+.main-todo-list-wrapper ul li {
+  color: #fff;
+  list-style: none;
+  display: flex;
+  line-height: 1;
+}
+
+form{ overflow: hidden;}
+
+@keyframes move {
+  to {
+    opacity: 1;
+    transform: translateX(0); 
+  }
+}
+
+h2{ color: #fff; margin-top: 0; margin-bottom: .5em; transform: translateX(-3em); opacity: 0; animation: move 1s 1s ease forwards; }
+
+.loading{ color: #fff; }
+
 .App {
   text-align: center;
 }
